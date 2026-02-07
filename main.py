@@ -22,4 +22,4 @@ app = create_app() # we initialize our flask app using the __init__.py function
 if __name__ == '__main__':
     with app.app_context():
         db.create_all() # create the SQLite database
-    app.run(debug=True) # run the flask app on debug mode
+    app.run(host="0.0.0.0", port=8080)
